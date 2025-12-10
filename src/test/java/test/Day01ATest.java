@@ -1,7 +1,7 @@
 package test;
 
 import org.junit.Test;
-import software.aoc.day01.a.Dial;
+import software.aoc.day01.a.model.Dial;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,13 +1,12 @@
-package software.aoc.day01.a;
+package software.aoc.day01.a.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class Dial {
     private final ArrayList<Order> orders;
     private Dial() {
-        this.orders = new ArrayList<Order>();
+        this.orders = new ArrayList<>();
     }
     public  static Dial create() {
         return new Dial();
