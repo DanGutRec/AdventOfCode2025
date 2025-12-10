@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class Dial {
-    private final ArrayList<Integer> orders;
+    private final ArrayList<Order> orders;
     private Dial() {
-        this.orders = new ArrayList<Integer>();
+        this.orders = new ArrayList<Order>();
     }
     public  static Dial create() {
         return new Dial();
@@ -17,9 +17,8 @@ public class Dial {
     }
 
     private int sumAll() {
-        return normalize(orders.stream().mapToInt(x -> x).sum()+50);
+        return normalize(orders.stream().mapToInt(Order::movement).sum()+50);
     }
-
     private int normalize(int value) {
         return (value < 0 ? 100 : 0)+value % 100;
     }
@@ -29,19 +28,11 @@ public class Dial {
     }
 
     public Dial add(String... split) {
-        Arrays.stream(split).map(this::conversion).forEach(orders::add);
+        Arrays.stream(split).map(this::orderFactory).forEach(orders::add);
         return this;
     }
 
-    private int conversion(String line) {
-        return signOf(line)*parseInt(line);
-    }
-
-    private int parseInt(String line) {
-        return Integer.parseInt(line.substring(1));
-    }
-
-    private int signOf(String line) {
-        return line.charAt(0) == 'R' ? 1 : -1;
+    private Order orderFactory(String line) {
+        return Order.create(line);
     }
 }

@@ -20,6 +20,9 @@ public class Day01ATest {
     public void Dial_test_positions_multiple_movements() {
         assertThat(Dial.create().execution("R10\nR10").position()).isEqualTo(70);
         assertThat(Dial.create().add("R10","R10").position()).isEqualTo(70);
-
+        assertThat(Dial.create().execution("R50\nR50").position()).isEqualTo(50);
+        assertThat(Dial.create().execution("L10\nL10").position()).isEqualTo(30);
+        assertThat(Dial.create().add("L10","L10").position()).isEqualTo(30);
+        assertThat(Dial.create().execution("L50\nL50").position()).isEqualTo(50);
     }
 }
