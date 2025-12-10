@@ -3,7 +3,7 @@ package test;
 import org.junit.Test;
 import software.aoc.day01.a.model.Dial;
 import software.aoc.day01.a.model.Rotation;
-import test.io.PDFRotationsCombinationReader;
+import test.io.TXTRotationsCombinationReader;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
