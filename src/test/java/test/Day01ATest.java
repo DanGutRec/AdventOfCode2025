@@ -2,15 +2,16 @@ package test;
 
 import org.junit.Test;
 import software.aoc.day01.a.model.Dial;
-import software.aoc.day01.a.model.Order;
+import software.aoc.day01.a.model.Rotation;
+import test.io.PDFRotationsCombinationReader;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Day01ATest {
     @Test
-    public void Order_test_creation() {
-        assertThat(Order.create("R10").movement()).isEqualTo(10);
-        assertThat(Order.create("L10").movement()).isEqualTo(-10);
+    public void Rotations_test_creation() {
+        assertThat(Rotation.create("R10").movement()).isEqualTo(10);
+        assertThat(Rotation.create("L10").movement()).isEqualTo(-10);
     }
     @Test
     public void Dial_test_positions_simple_movements() {
@@ -38,4 +39,5 @@ public class Day01ATest {
         assertThat(Dial.create().execution("L50\nL10").countPositionIsOn0()).isEqualTo(1);
         assertThat(Dial.create().execution("R50\nR100").countPositionIsOn0()).isEqualTo(2);
     }
+
 }
