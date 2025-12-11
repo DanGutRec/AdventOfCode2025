@@ -40,4 +40,8 @@ public class Day01ATest {
         assertThat(Dial.create().execution("R50\nR100").countPositionIsOn0()).isEqualTo(2);
     }
 
+    public static void main() {
+        System.out.println(Dial.create().add(TXTRotationsCombinationReader.instance().getFile("src/test/java/TestData/Day01ATEST.txt")).countPositionIsOn0());
+    }
+
 }
