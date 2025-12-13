@@ -1,4 +1,4 @@
-package software.aoc.day01.a.model;
+package software.aoc.day01.b.model;
 
 import software.aoc.day01.a.aplication.OrderDeserialize;
 
