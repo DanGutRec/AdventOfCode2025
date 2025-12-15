@@ -14,8 +14,7 @@ public class TXTRotationsCombinationReader implements CombinationReader {
         }
     }
     public static TXTRotationsCombinationReader instance() {
-        if (instance== null ) TXTRotationsCombinationReader.instance = new TXTRotationsCombinationReader();
+        if (instance== null ) instance = new TXTRotationsCombinationReader();
         return instance;
     }
-    private TXTRotationsCombinationReader() {}
 }
