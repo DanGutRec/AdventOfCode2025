@@ -11,15 +11,15 @@ public class IdRangeDeserializer {
     }
 
     private static Id[] ToID(String[] strings) {
-        return toID(parseInt(strings));
+        return toID(parseLong(strings));
     }
 
-    private static Id[] toID(int[] ints) {
+    private static Id[] toID(long[] ints) {
         return Arrays.stream(ints).mapToObj(Id::new).toArray(Id[]::new);
     }
 
-    private static int[] parseInt(String[] strings) {
-        return Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();
+    private static long[] parseLong(String[] strings) {
+        return Arrays.stream(strings).mapToLong(Long::valueOf).toArray();
     }
     private static String[] SplitLine(String line) {
         return line.split("-");

@@ -1,4 +1,4 @@
 package software.aoc.day02.a.model;
 
-public record Id(int id) {
+public record Id(long id) {
 }
