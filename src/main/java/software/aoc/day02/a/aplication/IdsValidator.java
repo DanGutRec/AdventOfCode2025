@@ -32,18 +32,16 @@ public class IdsValidator {
     }
 
     private long IdRangeValidation(IdRanges ids) {
-        return  ids.stream().mapToLong(this::isValidID).sum();
+        return  ids.stream().mapToLong(this::isInvalidID).sum();
     }
 
-    private long isValidID(Id id) {
+    private long isInvalidID(Id id) {
         if (numberLength(id.id())%2!=0) return 0;
         return (id.id()/(long)Math.pow(10, numberLength(id.id())/2))==(id.id()%(long)Math.pow(10, numberLength(id.id())/2)) ? id.id():0;
     }
-
     private long numberLength(long id) {
         return String.valueOf(id).length();
     }
-
 
     public long lenght() {
         return this.ids_ranges.size();
