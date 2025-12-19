@@ -49,7 +49,7 @@ public class Day02BTest {
         assertThat(IdsValidator.create(IdRangeDeserializer.instance()).add("38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124").countOfInvalids()).isEqualTo( 2985196460L);
 
     }
-    static void main(String[] args) {
+    static void main() {
         System.out.println(IdsValidator.create(IdRangeDeserializer.instance()).add(TXTRotationsCombinationReader.instance().getFile("src/test/java/TestData/Day02ATEST.txt")).countOfInvalids());
     }
 }
