@@ -1,6 +1,6 @@
 package software.aoc.day02.b.aplication;
 
-import software.aoc.day02.a.model.Id;
+import software.aoc.day02.b.model.Id;
 
 import java.util.Arrays;
 

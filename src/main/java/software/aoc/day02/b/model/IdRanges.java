@@ -1,27 +1,27 @@
 package software.aoc.day02.b.model;
 
-import software.aoc.day02.a.model.Id;
+
 
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 
 public class IdRanges {
-    private final software.aoc.day02.a.model.Id start;
-    private final software.aoc.day02.a.model.Id end;
+    private final Id start;
+    private final Id end;
 
-    private IdRanges(software.aoc.day02.a.model.Id[] parameters) {
+    private IdRanges(Id[] parameters) {
         this.start=parameters[0];
         this.end=parameters[1];
     }
-    public static IdRanges create(software.aoc.day02.a.model.Id[] ids) {
+    public static IdRanges create(Id[] ids) {
         return new IdRanges(ids);
     }
 
-    public Stream<software.aoc.day02.a.model.Id> stream() {
-        return LongStream.range(start.id(),end.id()+1).mapToObj(software.aoc.day02.a.model.Id::new);
+    public Stream<Id> stream() {
+        return LongStream.range(start.id(),end.id()+1).mapToObj(Id::new);
     }
-    public software.aoc.day02.a.model.Id start(){return start;}
+    public Id start(){return start;}
     public Id end(){return end;}
 
 }

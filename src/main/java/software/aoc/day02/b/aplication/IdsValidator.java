@@ -1,13 +1,12 @@
 package software.aoc.day02.b.aplication;
 
-import software.aoc.day02.a.aplication.IdRangeDeserializer;
-import software.aoc.day02.a.model.Id;
-import software.aoc.day02.a.model.IdRanges;
+
+import software.aoc.day02.b.model.Id;
+import software.aoc.day02.b.model.IdRanges;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
@@ -41,7 +40,7 @@ public class IdsValidator {
     }
 
     private long isInvalidID(Id id) {
-        return (LongStream.range(2,numberLength(id.id())/2+1)
+        return (LongStream.range(1,numberLength(id.id())/2+1)
                 .filter(divination->numberLength(id.id())%divination==0)
                 .mapToInt(divitation->repeatedPatternValidator(id,divitation))
                 .anyMatch(result->result>0) ) ?
