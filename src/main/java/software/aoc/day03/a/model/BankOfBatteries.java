@@ -16,4 +16,6 @@ public class BankOfBatteries {
     public void addBattery(Stream<Battery> battery) {
         battery.forEach(this.batteries::add);
     }
+    public int size() {return this.batteries.size();}
+    public Battery getBattery(int index) {return this.batteries.get(index);}
 }

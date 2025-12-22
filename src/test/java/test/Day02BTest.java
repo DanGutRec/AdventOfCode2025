@@ -50,6 +50,9 @@ public class Day02BTest {
 
     }
     static void main() {
-        System.out.println(IdsValidator.create(IdRangeDeserializer.instance()).add(TXTRotationsCombinationReader.instance().getFile("src/test/java/TestData/Day02ATEST.txt")).countOfInvalids());
+        System.out.println(IdsValidator.create(IdRangeDeserializer.instance())
+                .add(TXTRotationsCombinationReader.instance()
+                        .getFile("src/test/java/TestData/Day02ATEST.txt"))
+                .countOfInvalids());
     }
 }
