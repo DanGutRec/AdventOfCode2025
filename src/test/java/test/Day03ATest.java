@@ -19,9 +19,12 @@ public class Day03ATest {
     }
     @Test
     public void Batteries_deserialize_Tests() {
-        assertThat(BatteryDeserializer.deserialize("4").joltage()).isEqualTo(4);
-        assertThrows(IllegalArgumentException.class,()->BatteryDeserializer.deserialize("10").joltage());
-        assertThrows(IllegalArgumentException.class,()->BatteryDeserializer.deserialize("0").joltage());
+        assertThat(BatteryDeserializer.deserialize("4").toList().get(0).joltage())
+                .isEqualTo(4);
+        assertThrows(IllegalArgumentException.class,
+                ()->BatteryDeserializer.deserialize("10").toList().get(0).joltage());
+        assertThrows(IllegalArgumentException.class,
+                ()->BatteryDeserializer.deserialize("0").toList().get(0).joltage());
 
     }
     @Test
