@@ -9,7 +9,7 @@ public class BatteryDeserializer {
     private static  BatteryDeserializer instance;
     public static Stream<Battery> deserialize(String input) {
         if (instance == null) instance = new BatteryDeserializer();
-            return toBattery(input);
+        return toBattery(input);
     }
     public static Stream<Battery> deserializer(String[] input) {
         if (instance == null) instance = new BatteryDeserializer();

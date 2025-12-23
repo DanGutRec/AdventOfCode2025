@@ -8,7 +8,7 @@ public class BankOfBatteries {
     private final List<Battery> batteries;
 
     private BankOfBatteries() {
-        this.batteries = new ArrayList<Battery>();
+        this.batteries = new ArrayList<>();
     }
     public static BankOfBatteries create() {
         return new BankOfBatteries();
