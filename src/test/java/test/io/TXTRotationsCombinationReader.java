@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 public class TXTRotationsCombinationReader implements CombinationReader {
     private static TXTRotationsCombinationReader instance;
     @Override
-    public  Stream getFile(String path) {
+    public  Stream<String> getFile(String path) {
         try {
             return new FileReader(path).readAllLines().stream();
         } catch (Exception e) {

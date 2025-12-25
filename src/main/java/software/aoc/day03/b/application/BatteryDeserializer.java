@@ -1,6 +1,6 @@
-package software.aoc.day03.a.application;
+package software.aoc.day03.b.application;
 
-import software.aoc.day03.a.model.Battery;
+import software.aoc.day03.b.model.Battery;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
