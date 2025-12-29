@@ -2,6 +2,8 @@ package software.aoc.day04.a.model;
 
 public interface Tile {
     TileType type();
+    Position position();
+    record Position(int x, int y){}
     enum TileType{
         EMPTY('.'),
         RollOfPaper('@'),
@@ -19,5 +21,6 @@ public interface Tile {
             return EMPTY;
         }
     }
+
 }
 
